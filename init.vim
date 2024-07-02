@@ -41,7 +41,6 @@ endtry
 
 " NERDTree settings
 nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
 nnoremap <C-s> :wincmd p<CR>
 autocmd VimEnter * NERDTree | wincmd p
 
@@ -95,7 +94,7 @@ EOF
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.Trash/*"'
 nnoremap <C-S-F> :Rg<CR>
 " Go to definition
-nmap <silent> <C-S-D> <Plug>(coc-definition)
+nmap <silent> <C-d> <Plug>(coc-definition)
 
 " Show documentation
 nnoremap <silent> <C-K> :call CocActionAsync('doHover')<CR>
@@ -103,18 +102,15 @@ nnoremap <silent> <C-K> :call CocActionAsync('doHover')<CR>
 " Type hints and available methods/properties
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-" Show all diagnostics
-nnoremap <silent> <C-d> :CocList diagnostics<CR>
-
-" Go to previous diagnostic
-nnoremap <silent> <C-[> :call CocAction('diagnosticPrevious')<CR>
-
-" Go to next diagnostic
-nnoremap <silent> <C-]> :call CocAction('diagnosticNext')<CR>
-
 " Show all commands
 nnoremap <silent> <C-x> :CocList commands<CR>
 
 " List all symbols
 xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
+noremap <C-z> u
+noremap <C-f> /
+nnoremap u <Nop>
+nnoremap / <Nop>
+nnoremap <leader>c "+y
+vnoremap <leader>c "+y
