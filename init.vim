@@ -110,7 +110,3 @@ xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
 noremap <C-z> u
 noremap <C-f> /
-nnoremap u <Nop>
-nnoremap / <Nop>
-nnoremap <leader>c "+y
-vnoremap <leader>c "+y
